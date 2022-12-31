@@ -181,10 +181,11 @@ strong{
   background-repeat: repeat;
   background-position: center ; 
 }
-
 /* ajuste auto explicativo */
 .ajusteTexto {
   display: block;
+  min-width: 50%;
+  max-width: 50%;
   width: 50%;
   height: 50%;
   justify-items: center;
