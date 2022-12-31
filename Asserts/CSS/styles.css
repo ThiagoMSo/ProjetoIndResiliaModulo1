@@ -1,0 +1,392 @@
+/* chamar font: font-family: 'Open Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html {font-size: 100%;} /*16px*/
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0%;
+  font-weight: 400;  /*Ajuste de fonte*/ 
+  line-height: 1.20;
+}
+
+a{
+ list-style-type: none;
+ text-decoration: none;
+ color: #F0E8BD;
+}
+p {margin-bottom: 1rem;}
+
+/* Cor e detalhes nas letras */
+#hobbies, #contato, #sobreMim{
+  color: #F28D52;
+  font-weight: 600;
+  font-weight: bolder;
+  line-height: 1.20;}
+
+  /* Efeito de animação: Passar o mouse por cima da tecla */
+#hobbies, #contato, #sobreMim{
+  box-shadow: inset 0 0 0 0 #2703A6;
+  color: #2703A6;
+  margin: 2 -.25rem;
+  padding: 0 .25rem;
+  transition: color .2s ease-in-out, box-shadow .4s ease-in-out
+}
+/* Coloração da animação */
+#hobbies:hover {
+  box-shadow: inset 105px 0 0 0 #d7dee1;
+  color: white;
+}
+#contato:hover{
+  box-shadow: inset 105px 0 0 0 #d7dee1;
+  color: white;
+}
+#sobreMim:hover{
+box-shadow: inset 138px 0 0 0 #d7dee1;
+color: white;
+}
+
+/* Retirando as cores das letras */
+strong{
+  text-decoration: none;
+  color: #F28D52;
+}
+#In{
+  color: #F28D52;
+  font-size: 25px;
+}
+
+/*Meio da primeira pagina*/
+
+/* Tornamos um bloco na tela, definimos ela como flex e centro, para tudo ficar ao maximo centralizado */
+.cabecalho {
+  display: flex;
+  position: fixed; /* Fixar .cabecalho*/
+  width: 100%; /* Definir Largura */
+  margin: 0 auto;
+  font-size: 25px;
+  justify-content: center;
+  background-color: #160470;
+}
+
+/* bloco para ajustar os itens e icons */
+.icons{
+  display: block;  /* Habilitar Display Block > Flex*/
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  padding: 5px;
+}
+
+.icons ul{
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: end;
+}
+.icons li{
+  margin-right: 20px;
+}
+
+/* display para o nome */
+.nome {
+  display: block;  /* Habilitar Display Block > Flex*/
+  position: fixed;
+  margin-left: 300px;
+  left: 0;
+}
+
+.tags ul{
+  display: flex;  /* Habilitar Display Block > Flex*/
+  flex-flow: row wrap; /* Alinhar em Linhas e quebrar linha*/
+  justify-content: center; /* Alinhar conteúdo no fim do .cabecalho*/
+}
+
+/* Separei um pouco os itens da tela, assim ele não fica tão colado */
+.tags ul li{
+  margin-left: 20px;
+}
+
+/* Centro da tela */
+
+/* Criei um display que ocupa a tela toda, no caso ele pegará minha primeira pagina e centralizará o quadrado */
+#centroTela{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 83%; /*tamanho da largula de forma responsiva*/
+  height: 100vh; /*Vh = viewPort, Usará o tamanho da pagina como bloco*/
+}
+
+/* Defini a imagem como fundo da primeira pagina */
+.bg{
+  background-image: url(../img/backgroundPag1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;  
+}
+
+/* Ajustes de fonte e cor */
+.resumo{
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+/* Ajustei tamanho do txt Thiago Soares */
+#titulo {
+  font-size: 54px;
+}
+
+/*Efeito escrevendo*/
+
+.escrevendo{
+  display: inline-block;
+  margin: 0px;
+  border-right: 2px solid rgb(237, 230, 230);
+  padding-right:3px ;
+  max-width: 0;
+  white-space: nowrap; /*Não deixa o texto quebrar*/
+  overflow: hidden; /*Esconde o que está fora da tag*/
+  animation: pisca normal infinite .8s, escrever normal 5s steps(55) both; /*both quando a animação termina ela deixa fixa*/
+}
+
+/*Keyframe determina estados da animação*/
+@keyframes pisca {
+  100%{
+      border-right-color: transparent;
+  }
+}
+
+@keyframes escrever {
+  100%{
+      max-width: 100%;
+  }
+}
+
+/* Pagina 2 - hobbies */
+
+.Back2{
+  background-color: #160470;
+}
+
+/* Ajuste de tela e background */
+.display2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /*tamanho da largula de forma responsiva*/
+  height: 100vh; /*Vh = viewPort, Usará o tamanho da pagina como bloco*/
+  background-image: url(../img/backgroundPag2.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center ; 
+}
+
+/* ajuste auto explicativo */
+.ajusteTexto {
+  display: block;
+  width: 50%;
+  height: 50%;
+  justify-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 2px #F28D52;
+  background: #F28D52;
+}
+
+/* Tamanho do texto e cor */
+.ParagrafoBio {
+  text-align: left;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 10px;
+  margin: 13px;
+}
+
+/* tamanho do titulo */
+.ParagrafoTit{
+  text-align: center;
+  color: beige;
+  font-size: 32px;
+}
+
+/* Pagina 3 */
+
+/* Ajuste pagina 3 dimensionamento */
+.display3 {
+  display: flex;
+  width: 100%; /*tamanho da largula de forma responsiva*/
+  height: 100vh;
+  background-image: url(../img/BackgroundPag3.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center ; 
+}
+
+/* Primeiro quadrado com o principal dos Hobbies */
+.formatacao1{
+  display: flex;
+  width: 35%;
+  height: 50%;
+  margin-left: 5%;
+  margin-top: 5%;
+  border-radius: 80px;
+  margin: 2px #F28D52;
+  background: #F28D52;
+  justify-content: center;
+}
+
+#hob{
+  color: aliceblue;
+  font-size: 61px;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  margin-left: 20%;
+}
+/* Ajustando tamanho da fonte */
+.tithob ul li{
+  font-size: 28px;
+}
+
+.escHob{
+  padding: 10px;
+  color: aliceblue;
+}
+
+
+/* Segundo quadrado com a segunda parte dos hobbies */
+.formatacao2{
+  display: flexbox;
+  width: 35%;
+  height: 45%;
+  margin-left: 10%;
+  margin-top: 22%;
+  border-radius: 80px;
+  margin: 2px #F28D52;
+  background: #F28D52;
+}
+
+.escHob2{
+  padding: 7px;
+  color: aliceblue;
+  font-size: 28px;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+/* Pagina 4 */
+
+.display4{
+  display: flex;
+  width: 100%; /*tamanho da largula de forma responsiva*/
+  height: 100vh;
+  background-image: url(../img/BackgroundPag4.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center; 
+}
+
+.contato{
+  display: flexbox;
+  background-color: #F28D52;
+  width: 30%;
+  height: 50%;
+  margin-top: 5%;
+  margin-left: 3%;
+  border-radius: 80px;
+}
+
+#contatos{
+  color: aliceblue;
+  font-size: 35px;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  margin-left: 35%;
+}
+
+.mensagem h3{
+  margin-top: 30px;
+  padding: 5px;
+  color: antiquewhite;
+}
+
+.links{
+  display: flexbox;
+  color: #F0E8BD;
+  margin-left: 15px;
+  padding: 8px;
+  margin-top: 3px;
+}
+
+/* formulario de contato */
+
+/* criação do quadrado onde ficara o formulario */
+.quadrado{
+  display: flexbox;
+  margin-top: 32%;
+  margin-left: 42%;
+  background-color: #3807B8;
+  padding: 15px;
+  border-radius: 15px;
+  color: antiquewhite
+}
+
+/* Configurações dos dados dos usuarios */
+.dadosUser{
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+/* cor na borda */
+fieldset{
+  border-color: #0c033d;
+}
+
+/* Conf das bordas + cor */
+legend{
+  border: solid #0c033d;
+  padding: 10px;
+  text-align: center;
+  background-color: #0c033d;
+  border-radius: 8px;
+  ;
+}
+
+.inputDados{
+  position: absolute;
+  pointer-events: none;
+  transition: .5s;
+}
+
+/* botão de enviar estilizado */
+#submit{
+  background-image: linear-gradient(to right,#2703A6, #010440, #1A0233);
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Rodapé */
+footer{
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0c0748;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Tirando os pontos das listas */
+li{
+    list-style-type: none;
+  }
