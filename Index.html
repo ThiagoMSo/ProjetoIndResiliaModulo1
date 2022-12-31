@@ -176,32 +176,39 @@
                 <legend> <b>Entre em contato </b></legend>
                 <div class="dados">
                     <input type="text" name="nome" id="nome" class="dadosUser" required>
-                    <label for="nome" class="inputDados"> Nome Completo </label>
+                    <label for="nome" class="inputDados"> <b> Nome Completo </b> </label>
                 </div>    
                 <br>
                 <br>
                 <div class="dados"> 
                     <input type="text" name="email" id="email" class="dadosUser" required>
-                    <label for="email" class="inputDados"> E-mail </label>
+                    <label for="email" class="inputDados"> <b> E-mail </b> </label>
                 </div>
                 <br>
                 <br>
                 <div class="dados">
                     <input type="Tel" name="telefone" id="telefone" class="dadosUser" required>
-                    <label for="telefone" class="inputDados"> Telefone </label>
+                    <label for="telefone" class="inputDados"> <b>Telefone </b> </label>
                 </div>
                 <br>
                 <br>
                 <div class="dados">
-                    <label for="assunto" class="contatos"> <b>Contato </b> </label>
+                    <label for="assunto" class="contatos"> <b> Contato </b> </label>
                     <br>
                     <!-- Select cria aba de seleção de mensagem -->
                     <select>
                     <!-- Cria opçoes para enviar mensagem -->
+                        <option selected disabled value="">Selecione</option>
                         <option value="direcionamento"> Direcionamento</option>
                         <option value="Criação de site"> Criação de site</option>
                         <option value="outros"> Outros</option>
                     </select>
+                </div>
+                <br>
+                <div class="caixaText">
+                    <label> <b>Mensagem </b></label>
+                    <br>
+                    <textarea placeholder="Digite sua mensagem..."> </textarea>
                 </div>
                 <br>
                 <!-- Botão de enviar -->
